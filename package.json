@@ -1,0 +1,17 @@
+{
+  "name": "redux-webpack-starter",
+  "version": "1.0.0",
+  "description": "Simple Redux app using Webpack",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --open",
+    "build": "webpack"
+  },
+  "author": "Kid-us",
+  "license": "ISC",
+  "devDependencies": {
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.3"
+  }
+}
