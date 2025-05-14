@@ -37,3 +37,10 @@ export const { addProject, removeProject, updatePurchase } =
   projectSlice.actions;
 
 export default projectSlice.reducer;
+
+// Selector
+export const getPurchasedProjects = (state) => {
+  return state.entities.projects.filter(
+    (project) => project.purchased === true
+  );
+};

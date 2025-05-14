@@ -4,7 +4,7 @@ import projectsReducer from "./projects";
 
 const reducers = combineReducers({
   bugs: bugsReducer,
-  project: projectsReducer,
+  projects: projectsReducer,
 });
 
 export default reducers;
