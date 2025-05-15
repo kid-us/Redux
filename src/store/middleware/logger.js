@@ -1,4 +1,6 @@
-const logger = (store) => (next) => (action) => {
+const logger = (param) => (store) => (next) => (action) => {
+  console.log("Logging", param);
+
   console.log("Dispatching:", action);
   console.log("Next State:", store.getState());
   next(action);
