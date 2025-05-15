@@ -24,21 +24,21 @@ const store = createStore();
 // });
 
 // Bugs
-store.dispatch(bugAdded({ description: "Bug 1" }));
-store.dispatch(bugAdded({ description: "Bug 2" }));
-store.dispatch(bugAdded({ description: "Bug 3" }));
-store.dispatch(bugAdded({ description: "Bug 4" }));
-store.dispatch(bugResolved({ id: 1 }));
-store.dispatch(bugRemoved({ id: 4 }));
-store.dispatch(bugAddedToUser({ bugId: 1, userId: 1 }));
+// store.dispatch(bugAdded({ description: "Bug 1" }));
+// store.dispatch(bugAdded({ description: "Bug 2" }));
+// store.dispatch(bugAdded({ description: "Bug 3" }));
+// store.dispatch(bugAdded({ description: "Bug 4" }));
+// store.dispatch(bugResolved({ id: 1 }));
+// store.dispatch(bugRemoved({ id: 4 }));
+// store.dispatch(bugAddedToUser({ bugId: 1, userId: 1 }));
 
 // Projects
-store.dispatch(addProject({ name: "JavaScript" }));
-store.dispatch(addProject({ name: "TypeScript" }));
-store.dispatch(addProject({ name: "ReactNative" }));
-store.dispatch(addProject({ name: "React" }));
-store.dispatch(removeProject({ id: 4 }));
-store.dispatch(updatePurchase({ id: 2 }));
+// store.dispatch(addProject({ name: "JavaScript" }));
+// store.dispatch(addProject({ name: "TypeScript" }));
+// store.dispatch(addProject({ name: "ReactNative" }));
+// store.dispatch(addProject({ name: "React" }));
+// store.dispatch(removeProject({ id: 4 }));
+// store.dispatch(updatePurchase({ id: 2 }));
 
 // Users
 store.dispatch(addUsers({ name: "Lorem" }));
