@@ -14,12 +14,14 @@ const iceCreamSlice = createSlice({
     },
 
     restocked: (state, action) => {
-      state.numOfIceCreams = action.payload;
+      state.numOfIceCreams += action.payload;
     },
   },
+  
   extraReducers: (builder) => {
     builder.addCase(cakeOrdered, (state) => {
-      state.numOfIceCreams--;
+      state.numOfIceCreams =
+        state.numOfIceCreams > 1 && state.numOfIceCreams - 1;
     });
   },
 });
