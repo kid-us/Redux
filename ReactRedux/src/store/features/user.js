@@ -23,7 +23,7 @@ const userSlice = createSlice({
     });
 
     builders.addCase(fetchUsers.fulfilled, (state, action) => {
-      state.error = false;
+      state.loading = false;
       state.user = action.payload;
       state.error = "";
     });
