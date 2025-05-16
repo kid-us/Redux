@@ -5,11 +5,17 @@ let lastId = 0;
 
 const bugSlice = createSlice({
   name: "bugs",
-  initialState: [],
+  initialState: [
+    {
+      list: [],
+      loading: false,
+      lastFetch: null,
+    },
+  ],
   reducers: {
     // Add Bugs
     bugAdded: (bugs, action) => {
-      bugs.push({
+      bugs.list.push({
         id: ++lastId,
         description: action.payload.description,
         resolved: false,
@@ -20,20 +26,20 @@ const bugSlice = createSlice({
     bugAddedToUser: (bugs, action) => {
       const { userId, bugId } = action.payload;
 
-      const index = bugs.findIndex((bug) => bug.id === bugId);
-      bugs[index].userId = userId;
+      const index = bugs.list.findIndex((bug) => bug.id === bugId);
+      bugs.list[index].userId = userId;
     },
 
     // Update Resolved
     bugResolved: (bugs, action) => {
-      const index = bugs.findIndex((bug) => bug.id === action.payload.id);
-      if (index !== -1) bugs[index].resolved = true;
+      const index = bugs.list.findIndex((bug) => bug.id === action.payload.id);
+      if (index !== -1) bugs.list[index].resolved = true;
     },
 
     // Delete Bug
     bugRemoved: (bugs, action) => {
-      const index = bugs.findIndex((bug) => bug.id === action.payload.id);
-      if (index !== -1) bugs.splice(index, 1);
+      const index = bugs.list.findIndex((bug) => bug.id === action.payload.id);
+      if (index !== -1) bugs.list.splice(index, 1);
     },
   },
 });
